@@ -43,6 +43,7 @@ actor {
   };
 
   system func postupgrade() {
+    favorite_number := Hashmap.fromIter<Principal, Nat>{entries.vals(), 0, Principal.equal, Principal.hash};
     entries := [];
   };
 
